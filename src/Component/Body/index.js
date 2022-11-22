@@ -21,14 +21,15 @@ function DisplayMovies() {
    useEffect(()=> {
     document.body.className = theme;
    }, [theme]);
-  // const url =
-  //   `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}`;
+   const API_KEY = process.env.REACT_APP_API_KEY
+  const url =
+    `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}`;
   const baseImgUrl = "https://image.tmdb.org/t/p/w300";
 
   useEffect(() => {
     try {
       const getData = async () => {
-        let res = await axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}`);
+        let res = await axios.get(url);
         let pic = res.data;
         let pictures = pic.results;
         setMovies(pictures);
@@ -38,7 +39,7 @@ function DisplayMovies() {
     } catch (error) {
       console.log(error);
     }
-  }, []);
+  }, [url]);
   console.log(movies);
 
 
