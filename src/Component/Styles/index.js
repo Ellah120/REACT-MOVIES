@@ -6,7 +6,7 @@ export const StyledDiv = styled.div`
 
 export const StyledButton = styled.button`
   border: none;
-  background-color: #FAFAFF;
+  background-color: white;
 `
 
 export const StyledP = styled.p`

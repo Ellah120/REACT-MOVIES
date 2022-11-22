@@ -2,9 +2,22 @@ import {useEffect, useState} from "react";
 import axios from "axios";
 import ShowLikes from "../Like";
 import styled from "styled-components";
+import {FaMoon} from "react-icons/fa"
+import '../darkMode.css';
 
 function DisplayMovies() {
   const [movies, setMovies] = useState([]);
+  const [theme, setTheme] = useState('light')
+  const toggleTheme = () => {
+    if (theme === 'light'){
+      setTheme('dark');
+    } else{
+        setTheme('light');
+      }
+  }
+   useEffect(()=> {
+    document.body.className = theme;
+   }, [theme]);
   const url =
     `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}`;
   const baseImgUrl = "https://image.tmdb.org/t/p/w300";
@@ -27,8 +40,9 @@ function DisplayMovies() {
 
 
   return (
-    <StyledDiv>
-      
+    <StyledDiv className={`DisplayMovies ${theme}`}>
+      <StyledButton onClick={toggleTheme} style={{backgroundColor: theme === 'light' ? 'white' : '#333'}}><FaMoon style={{
+        color: theme === 'light' ? 'black' : 'white',}} /></StyledButton>
         {movies.map((movie) => (
           <StyledDivB>
         <StyledHeading>{movie.title}</StyledHeading>
@@ -48,7 +62,7 @@ export default DisplayMovies;
 const StyledDiv = styled.div`
 display: flex;
 flex-wrap: wrap;
-justify-content:space-around;
+justify-content: space-around;
 `;
 
 const StyledP = styled.p`
@@ -65,11 +79,19 @@ padding-left: 10px;
 `;
 
 const StyledDivB = styled.div`
-background-color: #FAFAFF;
+/* background-color: #FAFAFF; */
 margin-bottom: 20px;
 `
 
 const StyledHeading5 = styled.h5`
 padding-left: 10px;
 margin-bottom: 2px;
+`
+
+const StyledButton = styled.button`
+height: 20px;
+position: absolute;
+top: 23px;
+left: 1140px;
+border: none;
 `
