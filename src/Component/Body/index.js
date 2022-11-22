@@ -21,9 +21,9 @@ function DisplayMovies() {
    useEffect(()=> {
     document.body.className = theme;
    }, [theme]);
-   const API_KEY = process.env.REACT_APP_API_KEY
+   
   const url =
-    `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}`;
+    `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}`;
   const baseImgUrl = "https://image.tmdb.org/t/p/w300";
 
   useEffect(() => {
