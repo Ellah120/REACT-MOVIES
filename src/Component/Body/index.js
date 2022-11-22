@@ -5,6 +5,9 @@ import styled from "styled-components";
 import {FaMoon} from "react-icons/fa"
 import '../darkMode.css';
 
+
+// console.log(process.env.REACT_APP_API_KEY);
+
 function DisplayMovies() {
   const [movies, setMovies] = useState([]);
   const [theme, setTheme] = useState('light')
@@ -19,7 +22,7 @@ function DisplayMovies() {
     document.body.className = theme;
    }, [theme]);
   const url =
-    `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}`;
+    'https://api.themoviedb.org/3/discover/movie?api_key=3ac29bbc71779ab70cab9a1b4517d1aa';
   const baseImgUrl = "https://image.tmdb.org/t/p/w300";
 
   useEffect(() => {
