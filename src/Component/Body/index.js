@@ -72,7 +72,7 @@ justify-content: space-around;
 const StyledP = styled.p`
 width: 250px;
 padding-left: 10px;
-font-size: 0.95rem;
+font-size: 0.9rem;
 height: 240px;
 `;
 

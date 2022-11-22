@@ -7,6 +7,9 @@ export const StyledDiv = styled.div`
 export const StyledButton = styled.button`
   border: none;
   background-color: white;
+  padding: 0;
+  height: 1em;
+  margin-left: 10px;
 `
 
 export const StyledP = styled.p`
