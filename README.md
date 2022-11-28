@@ -1,4 +1,4 @@
-**Application link:https://app.netlify.com/sites/lighthearted-custard-aac225**
+**Application link:https://lighthearted-custard-aac225.netlify.app/**
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
