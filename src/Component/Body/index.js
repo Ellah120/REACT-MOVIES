@@ -96,10 +96,8 @@ margin-bottom: 2px;
 const StyledButton = styled.button`
 height: 20px;
 position: absolute;
-/* top: 23px; */
 top: 4%;
-/* left: 1140px; */
-left: 90.6%;
+left: 5%;
 padding: 0;
 border: none;
 `

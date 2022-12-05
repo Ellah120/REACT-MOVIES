@@ -21,15 +21,3 @@ function ShowLikes(){
 
 export default ShowLikes;
 
-// const StyledDiv = styled.div`
-//   display:flex;
-// `
-
-// const StyledButton = styled.button`
-//   border: none;
-//   background-color: #FAFAFF;
-// `
-
-// const StyledP = styled.p`
-//   padding-left: 10px;
-// `

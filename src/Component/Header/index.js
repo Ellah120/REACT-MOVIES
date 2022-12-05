@@ -22,7 +22,7 @@ margin: 0 auto;
 `;
 const StyledInput = styled.input`
 height: 1.7rem;
-width: 5.4rem;
+width: 6rem;
 margin-top:5px;
 border-radius:20px;
 border: 1px solid black;
