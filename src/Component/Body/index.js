@@ -44,7 +44,8 @@ function DisplayMovies() {
   return (
     <StyledDiv className={`DisplayMovies ${theme}`}>
       <StyledButton onClick={toggleTheme} style={{backgroundColor: theme === 'light' ? 'white' : '#333'}}><FaMoon style={{
-        color: theme === 'light' ? 'black' : 'white',}} /></StyledButton>
+        color: theme === 'light' ? 'black' : 'white',}} />
+        </StyledButton>
         {movies.map((movie) => (
           <StyledDivB>
         <StyledHeading>{movie.title}</StyledHeading>
@@ -98,6 +99,7 @@ position: absolute;
 /* top: 23px; */
 top: 4%;
 /* left: 1140px; */
-left: 90%;
+left: 90.6%;
+padding: 0;
 border: none;
 `
