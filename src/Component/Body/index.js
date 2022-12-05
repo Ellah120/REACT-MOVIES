@@ -6,7 +6,6 @@ import {FaMoon} from "react-icons/fa"
 import '../darkMode.css';
 
 
-// console.log(process.env.REACT_APP_API_KEY);
 
 function DisplayMovies() {
   const [movies, setMovies] = useState([]);
@@ -33,7 +32,6 @@ function DisplayMovies() {
         let pic = res.data;
         let pictures = pic.results;
         setMovies(pictures);
-        // console.log(pic);
       };
       getData();
     } catch (error) {
@@ -67,6 +65,7 @@ const StyledDiv = styled.div`
 display: flex;
 flex-wrap: wrap;
 justify-content: space-around;
+width:100%;
 `;
 
 const StyledP = styled.p`
@@ -85,6 +84,7 @@ padding-left: 10px;
 const StyledDivB = styled.div`
 /* background-color: #FAFAFF; */
 margin-bottom: 20px;
+/* width: 100vw; */
 `
 
 const StyledHeading5 = styled.h5`
@@ -95,7 +95,9 @@ margin-bottom: 2px;
 const StyledButton = styled.button`
 height: 20px;
 position: absolute;
-top: 23px;
-left: 1140px;
+/* top: 23px; */
+top: 4%;
+/* left: 1140px; */
+left: 90%;
 border: none;
 `
